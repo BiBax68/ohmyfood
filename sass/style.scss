@@ -1,2 +1,62 @@
 @import "libs/reset.scss";
 
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$third-color: #99E2D0;
+
+.searchbox p:nth-child(1){
+    color: $secondary-color;
+}
+
+body { 
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    max-width: 425px;
+    border: 2px solid black;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    display: none;
+
+    h3 {
+        text-transform: uppercase;
+        margin-bottom: -10px;
+    }
+}
+
+.bar_divider {
+    display: inline-block;
+    border-top: 2px solid $third-color;
+    width: 40px;
+    flex: 1;
+}
+
+
+// FOOTER
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #353535;
+
+    h4 {
+        margin: 15px 0 0 20px;
+        font-family: 'shrikhand', sans-serif;
+        color: white;
+    }
+
+    ul {
+        margin: 20px;
+    }
+
+    li {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+
+        
+    }
+}
