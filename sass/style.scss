@@ -1,5 +1,6 @@
 @import "libs/reset.scss";
 
+$icone-liste: (couvert "f2e7" #fff);
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $third-color: #99E2D0;
@@ -57,6 +58,15 @@ footer {
         flex-direction: column;
         margin: 5px;
 
-        
+        &:nth-child(1):before{
+            display: flex;
+            flex-direction: row;
+            content: "\f2e7";
+            font-family: FontAwesome;
+        }
+        &:nth-child(2):before{
+            content: "\f4c4";
+            font-family: FontAwesome;
+        }
     }
 }

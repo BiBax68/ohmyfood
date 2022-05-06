@@ -90,5 +90,15 @@ footer li {
   flex-direction: column;
   margin: 5px;
 }
+footer li:nth-child(1):before {
+  display: flex;
+  flex-direction: row;
+  content: "\f2e7";
+  font-family: FontAwesome;
+}
+footer li:nth-child(2):before {
+  content: "\f4c4";
+  font-family: FontAwesome;
+}
 
 /*# sourceMappingURL=style.css.map */
