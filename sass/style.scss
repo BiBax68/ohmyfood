@@ -11,22 +11,28 @@ body {
     font-weight: 300;
     max-width: 425px;
     border: 2px solid black;
+    display: flex;  /* ????*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 a {
     text-decoration: none;
+    color:#353535;
 }
 
 /*----- HEADER ------*/
 
 header {
-    box-shadow: 0px 4px 8px -2px rgba(0,0,0,0.83);
+    width: 100%;
+    box-shadow: 0px 2px 5px -2px rgba(0,0,0,0.33);
     z-index: 90;
+    display:flex;
+    justify-content: center;
 
     img{
-        display:flex;
         width: 40%;
-        margin-left: 25%;
         padding: 10px;
     }
 }
@@ -35,13 +41,12 @@ header {
 /*------- LOCALISATION -------*/
 .searchbox .localisation_bar {
     background-color: #eaeaea;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+
     p {
-        display: flex;
-        height: 40px;        
-        margin-left: 29%;
-        align-items: center;
-        font-size: smaller;
         font-weight: 500;
 
         &::before {
@@ -81,6 +86,7 @@ header {
         font-size: 0.9rem;
         padding: 13px;
         margin: 10px 0;
+        cursor: pointer;
     }
 }
 
@@ -97,13 +103,6 @@ header {
         font-weight: 700;
     }
 
-    &:nth-child(3)::before{
-        content: "\f3cd";
-                font-family: FontAwesome;
-                margin-right:15px;
-                color: gray;
-    }
-
     div {
         display: flex;
         border-radius: 15px;
@@ -114,23 +113,66 @@ header {
         font-weight: 500;
         justify-content: center;
         align-items: center;
-        box-shadow: 2px 2px 15px grey;
+        box-shadow: 2px 4px 8px rgb(216, 211, 211);
 
-        &:nth-child(2):before{
-            content: "\f3cd";
-                font-family: FontAwesome;
-                margin-right:15px;
-                color: gray;
+        &:nth-child(2){ 
+        &::before {
+            content: "1";
+            background-color: $primary-color;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            width: 1.5em;
+            height: 1.5em;
+            transform: translateX(-30px);
+            display: inline-block;
+            line-height: 1.5em;
+            }
+        
+            & p:before{
+                content: "\f3cd";
+                    font-family: FontAwesome;
+                    margin-right:15px;
+                    color: gray;
+            }
         }
-        &:nth-child(3):before{
-            content: "\f03a";
-                font-family: FontAwesome;
-                margin-right:15px;
-                color: gray;
+
+        &:nth-child(3){ 
+            &::before {
+                content: "2";
+                background-color: $primary-color;
+                color: white;
+                border-radius: 50%;
+                text-align: center;
+                width: 1.5em;
+                height: 1.5em;
+                transform: translateX(-30px);
+                display: inline-block;
+                line-height: 1.5em;
+            }
+            & p:before{
+                content: "\f03a";
+                    font-family: FontAwesome;
+                    margin-right:15px;
+                    color: gray;
+            }
         }
         &:nth-child(4){
             background-color: #f5edff;
-            &:before{
+            &::before {
+                content: "3";
+                background-color: $primary-color;
+                color: white;
+                border-radius: 50%;
+                text-align: center;
+                width: 1.5em;
+                height: 1.5em;
+                transform: translateX(-30px);
+                display: inline-block;
+                line-height: 1.5em;
+            }
+
+            & p:before{
                 content: "\f54e";
                 font-family: FontAwesome;
                 margin-right:15px;
@@ -147,12 +189,17 @@ header {
     article {
         display: flex;
         flex-direction: column;
-        margin: 10px;
+        margin: 15px;
         border: 1px solid black;
         border-radius: 15px;
+        background-color: white;
+        overflow: hidden;
+        
 
         figure img{
-            object-fit: contain;
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
         }
     }
 }

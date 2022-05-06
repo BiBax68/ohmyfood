@@ -49,34 +49,40 @@ body {
   font-weight: 300;
   max-width: 425px;
   border: 2px solid black;
+  display: flex;
+  /* ????*/
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
   text-decoration: none;
+  color: #353535;
 }
 
 /*----- HEADER ------*/
 header {
-  box-shadow: 0px 4px 8px -2px rgba(0, 0, 0, 0.83);
+  width: 100%;
+  box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.33);
   z-index: 90;
+  display: flex;
+  justify-content: center;
 }
 header img {
-  display: flex;
   width: 40%;
-  margin-left: 25%;
   padding: 10px;
 }
 
 /*------- LOCALISATION -------*/
 .searchbox .localisation_bar {
   background-color: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
 }
 .searchbox .localisation_bar p {
-  display: flex;
-  height: 40px;
-  margin-left: 29%;
-  align-items: center;
-  font-size: smaller;
   font-weight: 500;
 }
 .searchbox .localisation_bar p::before {
@@ -112,6 +118,7 @@ header img {
   font-size: 0.9rem;
   padding: 13px;
   margin: 10px 0;
+  cursor: pointer;
 }
 
 /* --------- boutton Menu ------------ */
@@ -126,12 +133,6 @@ header img {
   font-size: large;
   font-weight: 700;
 }
-.navmenu:nth-child(3)::before {
-  content: "\f3cd";
-  font-family: FontAwesome;
-  margin-right: 15px;
-  color: gray;
-}
 .navmenu div {
   display: flex;
   border-radius: 15px;
@@ -142,15 +143,39 @@ header img {
   font-weight: 500;
   justify-content: center;
   align-items: center;
-  box-shadow: 2px 2px 15px grey;
+  box-shadow: 2px 4px 8px rgb(216, 211, 211);
 }
-.navmenu div:nth-child(2):before {
+.navmenu div:nth-child(2)::before {
+  content: "1";
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  width: 1.5em;
+  height: 1.5em;
+  transform: translateX(-30px);
+  display: inline-block;
+  line-height: 1.5em;
+}
+.navmenu div:nth-child(2) p:before {
   content: "\f3cd";
   font-family: FontAwesome;
   margin-right: 15px;
   color: gray;
 }
-.navmenu div:nth-child(3):before {
+.navmenu div:nth-child(3)::before {
+  content: "2";
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  width: 1.5em;
+  height: 1.5em;
+  transform: translateX(-30px);
+  display: inline-block;
+  line-height: 1.5em;
+}
+.navmenu div:nth-child(3) p:before {
   content: "\f03a";
   font-family: FontAwesome;
   margin-right: 15px;
@@ -159,7 +184,19 @@ header img {
 .navmenu div:nth-child(4) {
   background-color: #f5edff;
 }
-.navmenu div:nth-child(4):before {
+.navmenu div:nth-child(4)::before {
+  content: "3";
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  width: 1.5em;
+  height: 1.5em;
+  transform: translateX(-30px);
+  display: inline-block;
+  line-height: 1.5em;
+}
+.navmenu div:nth-child(4) p:before {
   content: "\f54e";
   font-family: FontAwesome;
   margin-right: 15px;
@@ -173,12 +210,16 @@ header img {
 .restaurant article {
   display: flex;
   flex-direction: column;
-  margin: 10px;
+  margin: 15px;
   border: 1px solid black;
   border-radius: 15px;
+  background-color: white;
+  overflow: hidden;
 }
 .restaurant article figure img {
-  object-fit: contain;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
 }
 
 /* -------- Page des menus -------*/
