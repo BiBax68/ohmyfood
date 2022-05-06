@@ -5,15 +5,36 @@ $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $third-color: #99E2D0;
 
-.searchbox p:nth-child(1){
-    color: $secondary-color;
-}
 
 body { 
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     max-width: 425px;
     border: 2px solid black;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* header */
+
+header {
+    box-shadow: 1px 4px 2px -2px rgba(0,0,0,0.23);
+}
+
+header img{
+    display:flex;
+    justify-content: end;
+    align-items: flex-end;
+    width: 40%;
+    margin-left: 25%;
+    padding: 10px;
+}
+
+
+.searchbox div {
+    background-color: #353535;
 }
 
 .menu {
