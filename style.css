@@ -60,18 +60,27 @@ a {
 
 /*----- HEADER ------*/
 header {
+  position: relative;
   width: 100%;
   box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.33);
   z-index: 90;
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 header img {
   width: 40%;
   padding: 10px;
 }
 header button {
-  display: none;
+  border: none;
+  background-color: transparent;
+  font-size: x-large;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+header button:hover {
+  cursor: pointer;
 }
 
 /*------- LOCALISATION -------*/
@@ -267,14 +276,21 @@ header button {
 }
 
 /* -------- Page des menus -------*/
+.picture {
+  display: block;
+  max-height: 350px;
+}
+
 .menu {
   display: flex;
   top: -300px;
   flex-direction: column;
-  border: 3px solid black;
   width: 100%;
   border-radius: 30px 30px 0 0;
   padding: 20px;
+  position: relative;
+  top: -70px;
+  background-color: #f6f6f6;
 }
 .menu .title {
   display: flex;
@@ -312,12 +328,21 @@ header button {
   background-color: #99E2D0;
   align-items: center;
   box-shadow: 2px 4px 8px rgb(216, 211, 211);
+  width: 100%;
 }
 .menu .categorie article .anim_label {
   background-color: white;
   width: 100%;
   padding: 20px;
   border-radius: 15px;
+}
+.menu .categorie article .anim_label div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.menu .categorie article .anim_label div .price {
+  font-weight: 600;
 }
 .menu .categorie article .anim_label:hover {
   width: 80%;
@@ -336,6 +361,9 @@ header button {
   margin: 10px 0;
   cursor: pointer;
   width: 60%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 footer {
