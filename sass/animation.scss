@@ -1,0 +1,101 @@
+@import "variable.scss";
+/* LOADER PAGE */
+
+.loader {
+    position: fixed;
+    background-color: aliceblue;
+    height: 100vh;
+    inset: 0;
+    z-index: 99;
+    opacity: 0.95;
+    animation: loading 2s forwards;
+    animation-delay: 3s;
+
+    .color_cont {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .color {
+            display: inline-block;
+            height: 20rem;
+            width: 32%;
+            border-radius: 50%;
+        }
+
+        .color1 {
+            background-color: $primary-color;
+            filter: blur(4rem);
+        }
+
+        .color2 {
+            background-color: $third-color;
+            filter: blur(4rem);            
+        }
+        
+        .color3 {
+            background-color: $secondary-color;
+            filter: blur(4rem);
+        }
+    }
+
+    .icone {
+       position: absolute;
+       top: 50%;
+       transform: translate(0, -50%);
+
+       path:nth-child(1) {
+           stroke-dasharray: 40px;
+           stroke-dashoffset: 40px;
+           animation: anim 6s ease infinite forwards;
+       }
+
+       @keyframes anim {
+        0% {
+            stroke-dashoffset: 0;
+            }
+        25%{
+            stroke-dashoffset: 30px;
+            }
+        50%{
+            stroke-dashoffset: 10px;
+            }
+        75% {
+            stroke-dasharray: 30px;
+            }
+        100% {
+           stroke-dasharray: 10;
+            }
+        }
+    }
+}
+
+@keyframes loading {
+    100% {
+        opacity: 0;
+        z-index: -10;
+    }
+}
+
+/* APPARATITION DES ARTICLES */
+@mixin fade_up {
+    & .label_box {
+      animation-name: fadeUp;
+      animation-duration: 1000ms;
+      animation-fill-mode: backwards;
+      animation-delay: 0.5s;
+    }
+    @keyframes fadeUp {
+      from {
+        transform: translateY(100px);
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+  
