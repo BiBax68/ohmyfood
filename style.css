@@ -45,7 +45,7 @@ td, th {
 }
 
 /* BOUTON "nouveau" pour les cartes de restaurant */
-article figure button {
+.new {
   position: absolute;
   display: block;
   background-color: #99E2D0;
@@ -242,7 +242,7 @@ header img {
   margin: 8px;
   padding: 20px;
   background-color: #f6f6f6;
-  font-size: 1 rem;
+  font-size: 1rem;
   font-weight: 500;
   justify-content: center;
   align-items: center;
@@ -343,7 +343,7 @@ header img {
 .restaurant article div h3 {
   font-weight: bold;
   font-size: 1.3rem;
-  initial-letter-align: 1.55px;
+  initial-letter-align: 1.5px;
 }
 .restaurant article div p {
   margin-top: 5px;
