@@ -149,7 +149,7 @@ header button:hover {
     stroke-dasharray: 30px;
   }
   100% {
-    stroke-dasharray: 10;
+    stroke-dasharray: 10px;
   }
 }
 
@@ -457,20 +457,13 @@ header img {
 .menu .categorie:nth-child(4) .label_box {
   animation-delay: 1.5s;
 }
-.menu .categorie article {
-  display: flex;
-  border-radius: 15px;
-  margin: 8px 0;
-  background-color: #99E2D0;
-  align-items: center;
-  box-shadow: 2px 4px 8px rgb(216, 211, 211);
-  width: 100%;
-}
 .menu .categorie article .anim_label {
   background-color: white;
   width: 100%;
   padding: 20px;
   border-radius: 15px;
+  margin: 8px 0;
+  box-shadow: 2px 4px 8px rgb(216, 211, 211);
 }
 .menu .categorie article .anim_label div {
   display: flex;
@@ -486,6 +479,14 @@ header img {
 }
 .menu .categorie article .anim_label span {
   font-weight: 600;
+}
+.menu .categorie article .chek {
+  background-color: #99E2D0;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
 }
 .menu .btn_container {
   display: flex;

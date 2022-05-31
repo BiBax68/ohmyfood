@@ -3,393 +3,383 @@
 @import "btn.scss";
 @import "animation.scss";
 
-
-body { 
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 a {
-    text-decoration: none;
-    color:#353535;
+  text-decoration: none;
+  color: #353535;
 }
 
 /*----- HEADER ------*/
 
 header {
-    position: relative;
-    width: 100%;
-    box-shadow: 0px 2px 5px -2px rgba(0,0,0,0.33);
-    z-index: 90;
-    text-align: center;
+  position: relative;
+  width: 100%;
+  box-shadow: 0px 2px 5px -2px rgba(0, 0, 0, 0.33);
+  z-index: 90;
+  text-align: center;
 
-    img{
-        width: 40%;
-        padding: 10px;
-    }
+  img {
+    width: 40%;
+    padding: 10px;
+  }
 }
-
 
 /*------- LOCALISATION -------*/
 .searchbox .localisation_bar {
-    background-color: #eaeaea;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
+  background-color: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
 
-    p {
-        font-weight: 600;
+  p {
+    font-weight: 600;
 
-        &::before {
-            content: "\f3c5";
-            font-family: FontAwesome;
-            margin: 10px;
-        }
-    }   
+    &::before {
+      content: "\f3c5";
+      font-family: FontAwesome;
+      margin: 10px;
+    }
+  }
 }
 
-.searchbox .presentation{
-    background-color: #f6f6f6;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
+.searchbox .presentation {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
 
-    h2 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        padding: 0 50px;
-        text-align: center;
-    }
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0 50px;
+    text-align: center;
+  }
 
-    p {
-        margin: 10px 20px;
-        text-align: center;
-        font-weight: 300;
-    }
+  p {
+    margin: 10px 20px;
+    text-align: center;
+    font-weight: 300;
+  }
 }
 
 /* --------- boutton Menu ------------ */
 .navmenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+
+  h2 {
+    font-size: large;
+    font-weight: 700;
+  }
+
+  div {
     display: flex;
-    flex-direction: column;
+    border-radius: 15px;
+    margin: 8px;
+    padding: 20px;
+    background-color: #f6f6f6;
+    font-size: 1 rem;
+    font-weight: 500;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    box-shadow: 2px 4px 8px rgb(216, 211, 211);
 
-    h2 {
-        font-size: large;
-        font-weight: 700;
+    &:nth-child(2) {
+      &::before {
+        content: "1";
+        background-color: $primary-color;
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        width: 1.5em;
+        height: 1.5em;
+        transform: translateX(-30px);
+        display: inline-block;
+        line-height: 1.5em;
+      }
+
+      & p:before {
+        content: "\f3cd";
+        font-family: FontAwesome;
+        margin-right: 15px;
+        color: gray;
+      }
     }
 
-    div {
-        display: flex;
-        border-radius: 15px;
-        margin: 8px;
-        padding: 20px;
-        background-color: #f6f6f6;
-        font-size: 1 rem;
-        font-weight: 500;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 2px 4px 8px rgb(216, 211, 211);
-
-        &:nth-child(2){ 
-        &::before {
-            content: "1";
-            background-color: $primary-color;
-            color: white;
-            border-radius: 50%;
-            text-align: center;
-            width: 1.5em;
-            height: 1.5em;
-            transform: translateX(-30px);
-            display: inline-block;
-            line-height: 1.5em;
-            }
-        
-            & p:before{
-                content: "\f3cd";
-                    font-family: FontAwesome;
-                    margin-right:15px;
-                    color: gray;
-            }
-        }
-
-        &:nth-child(3){ 
-            &::before {
-                content: "2";
-                background-color: $primary-color;
-                color: white;
-                border-radius: 50%;
-                text-align: center;
-                width: 1.5em;
-                height: 1.5em;
-                transform: translateX(-30px);
-                display: inline-block;
-                line-height: 1.5em;
-            }
-            & p:before{
-                content: "\f03a";
-                    font-family: FontAwesome;
-                    margin-right:15px;
-                    color: gray;
-            }
-        }
-        &:nth-child(4){
-            background-color: #f5edff;
-            &::before {
-                content: "3";
-                background-color: $primary-color;
-                color: white;
-                border-radius: 50%;
-                text-align: center;
-                width: 1.5em;
-                height: 1.5em;
-                transform: translateX(-30px);
-                display: inline-block;
-                line-height: 1.5em;
-            }
-
-            & p:before{
-                content: "\f54e";
-                font-family: FontAwesome;
-                margin-right:15px;
-                color: $primary-color;
-            }
-        }
+    &:nth-child(3) {
+      &::before {
+        content: "2";
+        background-color: $primary-color;
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        width: 1.5em;
+        height: 1.5em;
+        transform: translateX(-30px);
+        display: inline-block;
+        line-height: 1.5em;
+      }
+      & p:before {
+        content: "\f03a";
+        font-family: FontAwesome;
+        margin-right: 15px;
+        color: gray;
+      }
     }
+    &:nth-child(4) {
+      background-color: #f5edff;
+      &::before {
+        content: "3";
+        background-color: $primary-color;
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        width: 1.5em;
+        height: 1.5em;
+        transform: translateX(-30px);
+        display: inline-block;
+        line-height: 1.5em;
+      }
+
+      & p:before {
+        content: "\f54e";
+        font-family: FontAwesome;
+        margin-right: 15px;
+        color: $primary-color;
+      }
+    }
+  }
 }
 
 /* -------- présentation des restaurants ------------ */
 .restaurant {
-    background-color: #f6f6f6;
-    width: 100%;
+  background-color: #f6f6f6;
+  width: 100%;
 
-    h2 {
-        font-size: x-large;
+  h2 {
+    font-size: x-large;
+    font-weight: bold;
+    margin: 10% auto 5% 5%;
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    margin: 5% 5%;
+    border-radius: 15px;
+    background-color: white;
+    overflow: hidden;
+    height: 300px;
+    width: 90%;
+
+    .restaurant_pic {
+      position: relative;
+    }
+
+    figure img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      position: relative;
+
+      h3 {
         font-weight: bold;
-        margin: 10% auto 5% 5%;
+        font-size: 1.3rem;
+        initial-letter-align: 1.55px;
+      }
+
+      p {
+        margin-top: 5px;
+        font-size: 1.1rem;
+        font-weight: 400;
+      }
+
+      i {
+        position: absolute;
+        right: 10%;
+        bottom: 180%;
+        font-size: 2rem;
+      }
     }
-
-    article {
-        display: flex;
-        flex-direction: column;
-        margin: 5% 5%;
-        border-radius: 15px;
-        background-color: white;
-        overflow: hidden;
-        height: 300px;
-        width: 90%;
-
-        .restaurant_pic {
-            position: relative;
-        }
-
-        figure img{
-            width: 100%;
-            height: 200px;
-            object-fit:cover;
-        }
-
-        div {
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            position: relative;
-
-            h3 {
-                font-weight: bold;
-                font-size: 1.3rem;
-                initial-letter-align: 1.55px;
-            }
-
-            p{
-                margin-top: 5px;
-                font-size: 1.1rem;
-                font-weight: 400;
-            }
-
-            i {
-                position: absolute;
-                right: 10%;
-                bottom: 180%;
-                font-size: 2rem;
-            }
-        }
-
-    }
+  }
 }
-
-
-
-
-
 
 /* -------- Page des menus -------*/
 .picture {
-    display: block;
-    max-height: 350px;
+  display: block;
+  max-height: 350px;
 }
 
 .menu {
+  display: flex;
+  top: -300px;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+  padding: 20px;
+  position: relative;
+  top: -70px;
+  background-color: #f6f6f6;
+
+  .title {
     display: flex;
-    top: -300px;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: xx-large;
+    align-items: center;
+
+    h2 {
+      font-weight: 900;
+      font-family: "shrikhand", sans-serif;
+    }
+  }
+
+  .bar_divider {
+    display: inline-block;
+    border-top: 2px solid $third-color;
+    width: 40px;
+    flex: 1;
+  }
+
+  h3 {
+    text-transform: uppercase;
+  }
+
+  h3 + .bar_divider {
+    margin-bottom: 10px;
+  }
+
+  .categorie {
+    display: flex;
     flex-direction: column;
-    width: 100%;
-    border-radius: 30px 30px 0 0;
-    padding: 20px;
-    position: relative;
-    top: -70px;
-    background-color: #f6f6f6;
+    margin: 20px 0;
+    padding: 10px;
+    @include fade_up;
 
-    .title {
+    &:nth-child(3) {
+      @include fade_up;
+      & .label_box {
+        animation-delay: 1s;
+      }
+    }
+
+    &:nth-child(4) {
+      @include fade_up;
+      & .label_box {
+        animation-delay: 1.5s;
+      }
+    }
+
+    article {
+      .anim_label {
+        background-color: white;
+        width: 100%;
+        padding: 20px;
+        border-radius: 15px;
+        margin: 8px 0;
+        box-shadow: 2px 4px 8px rgb(216, 211, 211);
+
+        div {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          .price {
+            font-weight: 600;
+          }
+        }
+
+        &:hover {
+          width: 80%;
+          transition: 0.5s;
+        }
+
+        span {
+          font-weight: 600;
+        }
+      }
+
+      .chek {
+        background-color: $third-color;
+        width: 4rem;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        font-size:xx-large;
         align-items: center;
-
-        h2{
-            font-weight: 900;
-            font-family: 'shrikhand', sans-serif;
-        }
-    }
-
-    .bar_divider {
-        display: inline-block;
-        border-top: 2px solid $third-color;
-        width: 40px;
-        flex: 1;
-    }    
-
-    h3 {
-        text-transform: uppercase;
-    }
-
-    h3 + .bar_divider {
-        margin-bottom: 10px;
-    }
-
-    .categorie {
-        display: flex;
-        flex-direction: column;
-        margin: 20px 0;
-        padding: 10px;
-        @include fade_up;
-
-        &:nth-child(3) {
-            @include fade_up;
-            & .label_box {
-                animation-delay: 1s;
-            }
-        }
-
-        &:nth-child(4) {
-            @include fade_up;
-            & .label_box {
-                animation-delay: 1.5s;
-            }
-        }
-
-        article {
-            display: flex;
-            border-radius: 15px;
-            margin: 8px 0;
-            background-color: $third-color;
-            align-items: center;
-            box-shadow: 2px 4px 8px rgb(216, 211, 211);
-            width: 100%;
-
-            .anim_label {
-                background-color: white;
-                width: 100%;
-                padding: 20px;
-                border-radius: 15px;
-
-                div {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-
-                    .price {
-                        font-weight: 600;
-                    }
-    
-                }
-
-                &:hover {
-                    width: 80%;
-                    transition: 0.5s;
-                }
-
-                span {
-                    font-weight: 600;
-                }
-            }
-        }
-    }
-
-    .btn_container {
-        display: flex;
         justify-content: center;
+        transition-duration: 0.5s;
+      }
     }
+  }
+
+  .btn_container {
+    display: flex;
+    justify-content: center;
+  }
 }
-
-
 
 // FOOTER
 
 footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  padding: 20px;
+  width: 100%;
+
+  h4 {
+    font-family: "shrikhand", sans-serif;
+    color: white;
+    font-size: 1.4rem;
+  }
+
+  ul {
+    margin: 8% 0;
+  }
+
+  li {
+    color: white;
     display: flex;
-    flex-direction: column;
-    background-color: #353535;
-    padding: 20px;
-    width: 100%;
+    flex-direction: row;
+    line-height: 2em;
 
-
-    h4 {
-        font-family: 'shrikhand', sans-serif;
-        color: white;
-        font-size: 1.4rem;
+    &:nth-child(1) {
+      font-weight: 400;
     }
 
-    ul {
-        margin: 8% 0;
+    &:nth-child(2) {
+      font-weight: 400;
     }
 
-
-    li {
-        color: white;
-        display: flex;
-        flex-direction: row;
-        line-height: 2em;
-
-        &:nth-child(1) {
-            font-weight: 400;
-        }
-
-        &:nth-child(2) {
-            font-weight: 400;
-        }
-
-        &:nth-child(1):before{
-            display: flex;
-            flex-direction: row;
-            content: "\f2e7";
-            font-family: FontAwesome;
-            margin-right: 2%;
-        }
-        &:nth-child(2):before{
-            content: "\f4c4";
-            font-family: FontAwesome;
-            margin-right: 2%;
-        }
+    &:nth-child(1):before {
+      display: flex;
+      flex-direction: row;
+      content: "\f2e7";
+      font-family: FontAwesome;
+      margin-right: 2%;
     }
+    &:nth-child(2):before {
+      content: "\f4c4";
+      font-family: FontAwesome;
+      margin-right: 2%;
+    }
+  }
 }
