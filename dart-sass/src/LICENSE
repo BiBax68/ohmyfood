@@ -789,7 +789,7 @@ coverage and quiver license:
 
 --------------------------------------------------------------------------------
 
-dart_style, glob, http, matcher, path, pub_semver, shelf, source_span, test and
+dart_style, glob, http, matcher, path, pub_semver, shelf, source_h4, test and
 watcher license:
 
 Copyright 2014, the Dart project authors. 
