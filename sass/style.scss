@@ -341,7 +341,7 @@ header {
     }
   }
 
-  .bar_divider {
+  .categorie .bar_divider {
     display: inline-block;
     border-top: 2px solid $third-color;
     width: 40px;
@@ -356,15 +356,21 @@ header {
     margin-bottom: 10px;
   }
 
-  .favorite i {
-    position: absolute;
+  article .favorite {
+    position: relative;
+    i {
+      position: absolute;
+    }
   }
 
-  .fas {
+  .favorite .fas {
     color: transparent;
     background-image: linear-gradient($secondary-color, $primary-color);
     background-clip: text;
     -webkit-background-clip: text;
+    position: absolute;
+    margin-left: -6.4%;
+    margin-top: 0.5%;
     opacity: 0;
     transition: all 0.4s;
 
