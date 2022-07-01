@@ -1,38 +1,11 @@
 @charset "UTF-8";
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
-html,
-body,
-p,
-ol,
-ul,
-li,
-dl,
-dt,
-dd,
-blockquote,
-figure,
-fieldset,
-legend,
-textarea,
-pre,
-iframe,
-hr,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
   font-weight: normal;
 }
@@ -41,9 +14,7 @@ ul {
   list-style: none;
 }
 
-button,
-input,
-select {
+button, input, select {
   margin: 0;
 }
 
@@ -51,14 +22,11 @@ html {
   box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: inherit;
 }
 
-img,
-video {
+img, video {
   height: auto;
   max-width: 100%;
 }
@@ -72,67 +40,10 @@ table {
   border-spacing: 0;
 }
 
-td,
-th {
+td, th {
   padding: 0;
 }
 
-/* BOUTON "nouveau" pour les cartes de restaurant */
-.new {
-  position: absolute;
-  display: block;
-  background-color: #99e2d0;
-  color: rgb(255, 255, 255);
-  border: none;
-  padding: 5px 10px;
-  border-radius: 2px;
-  z-index: 20;
-  right: 5%;
-  top: 5%;
-}
-
-/* BOUTON retour pour les headers des pages restaurant */
-header button {
-  border: none;
-  background-color: transparent;
-  font-size: x-large;
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-header button:hover {
-  cursor: pointer;
-}
-
-/* BOUTON générique */
-.generic {
-  border-radius: 25px;
-  border: none;
-  background: linear-gradient(
-    0deg,
-    rgb(147, 86, 220) 0%,
-    rgb(255, 121, 218) 100%
-  );
-  color: white;
-  min-width: 300px;
-  font-size: 0.9rem;
-  padding: 13px;
-  margin: 10px 0;
-  cursor: pointer;
-}
-.generic:hover {
-  background: linear-gradient(
-    170deg,
-    rgba(255, 121, 218, 0.8) 0%,
-    rgba(214, 108, 219, 0.8) 39%,
-    rgba(171, 94, 220, 0.8) 85%,
-    rgba(155, 89, 220, 0.8) 100%
-  );
-  box-shadow: 4px 4px 2px rgb(172, 171, 171);
-}
-
-/* LOADER PAGE */
 .loader {
   position: fixed;
   background-color: aliceblue;
@@ -150,21 +61,21 @@ header button:hover {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.loader .color_cont .color {
+.loader .color {
   display: inline-block;
   height: 20rem;
   width: 32%;
   border-radius: 50%;
 }
-.loader .color_cont .color1 {
+.loader .color1 {
   background-color: #9356dc;
   filter: blur(4rem);
 }
-.loader .color_cont .color2 {
+.loader .color2 {
   background-color: #99e2d0;
   filter: blur(4rem);
 }
-.loader .color_cont .color3 {
+.loader .color3 {
   background-color: #ff79da;
   filter: blur(4rem);
 }
@@ -173,7 +84,7 @@ header button:hover {
   top: 50%;
   transform: translate(0, -50%);
 }
-.loader .icone path:nth-child(1) {
+.loader path:nth-child(1) {
   stroke-dasharray: 40px;
   stroke-dashoffset: 40px;
   animation: anim 6s ease infinite forwards;
@@ -195,14 +106,190 @@ header button:hover {
     stroke-dasharray: 10;
   }
 }
-
 @keyframes loading {
   100% {
     opacity: 0;
     z-index: -10;
   }
 }
+
 /* APPARATITION DES ARTICLES */
+@keyframes fadeUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* CHECK MARK*/
+@keyframes spinCheck {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@media (min-width: 43rem) and (max-width: 62rem) {
+  body {
+    /*INDEX*/
+    /* page restaurant*/
+  }
+  body .searchbox {
+    width: 100%;
+  }
+  body .navmenu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  body .navmenu h2 {
+    margin-left: 50%;
+  }
+  body .navmenu h2::after {
+    display: inline-block;
+    content: "";
+    width: 500px;
+  }
+  body .navmenu div {
+    width: 30%;
+    margin: 0 10px;
+  }
+  body .restaurant {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  body .restaurant h2 {
+    margin: 1% 3%;
+    grid-column: 1/-1;
+  }
+  body footer {
+    display: inline-block;
+    text-align: center;
+  }
+  body footer ul {
+    display: inline-flex;
+    flex-direction: row;
+    margin: 0;
+    align-items: center;
+  }
+  body footer ul li {
+    white-space: nowrap;
+    margin: 10px 20px;
+  }
+  body footer h1 {
+    display: inline-flex;
+  }
+  body .menu .title {
+    display: flex;
+    justify-content: center;
+    margin: 4% 0;
+  }
+  body .menu .title i {
+    margin: 5px 20px;
+  }
+  body .menu h3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    font-size: larger;
+  }
+  body .menu .categorie .bar_divider {
+    display: flex;
+    justify-content: center;
+  }
+  body .menu .order {
+    max-width: 300px;
+  }
+}
+@media (min-width: 62rem) {
+  body {
+    /*INDEX*/
+    /* page restaurant*/
+  }
+  body .searchbox {
+    width: 100%;
+  }
+  body .navmenu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  body .navmenu h2::after {
+    display: inline-block;
+    content: "";
+    width: 500px;
+  }
+  body .navmenu div {
+    width: 30%;
+    margin: 0 10px;
+  }
+  body .restaurant {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+  body .restaurant article {
+    max-width: 80%;
+  }
+  body .restaurant h2 {
+    margin: 1% 3%;
+    grid-column: 1/-1;
+  }
+  body footer {
+    display: inline-block;
+    text-align: center;
+  }
+  body footer ul {
+    display: inline-flex;
+    flex-direction: row;
+    margin: 0;
+    align-items: center;
+  }
+  body footer ul li {
+    white-space: nowrap;
+    margin: 10px 20px;
+  }
+  body footer h1 {
+    display: inline-flex;
+  }
+  body .picture {
+    max-height: 32rem;
+    object-fit: cover;
+    width: 100%;
+    overflow: hidden;
+  }
+  body .menu {
+    display: grid;
+    grid-template-rows: 3;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  body .menu .title {
+    grid-column: 2/3;
+    display: flex;
+    justify-content: center;
+    margin: 4% 0;
+  }
+  body .menu .title i {
+    margin: 5px 20px;
+  }
+  body .menu .categorie1 {
+    grid-column: 1/2;
+  }
+  body .menu .categorie {
+    width: 90%;
+  }
+  body .menu .categorie article {
+    width: 100%;
+  }
+  body .menu .order {
+    grid-column: 2/3;
+    max-width: 300px;
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -228,6 +315,18 @@ header {
 header img {
   width: 40%;
   padding: 10px;
+}
+header button {
+  border: none;
+  background-color: transparent;
+  font-size: x-large;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+header button:hover {
+  cursor: pointer;
 }
 
 /*------- LOCALISATION -------*/
@@ -266,6 +365,20 @@ header img {
   text-align: center;
   font-weight: 300;
 }
+.searchbox .presentation button {
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  color: white;
+  font-size: 0.9rem;
+  padding: 13px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.searchbox .presentation button:hover {
+  background: linear-gradient(170deg, rgba(255, 121, 218, 0.8) 0%, rgba(214, 108, 219, 0.8) 39%, rgba(171, 94, 220, 0.8) 85%, rgba(155, 89, 220, 0.8) 100%);
+  box-shadow: 4px 4px 2px rgb(172, 171, 171);
+}
 
 /* --------- boutton Menu ------------ */
 .navmenu {
@@ -276,8 +389,11 @@ header img {
   padding: 40px;
 }
 .navmenu h2 {
+  display: flex;
+  width: 100%;
   font-size: large;
-  font-weight: 700;
+  font-weight: 600;
+  margin-left: 5%;
 }
 .navmenu div {
   display: flex;
@@ -285,7 +401,7 @@ header img {
   margin: 8px;
   padding: 20px;
   background-color: #f6f6f6;
-  font-size: 1rem;
+  font-size: 1 rem;
   font-weight: 500;
   justify-content: center;
   align-items: center;
@@ -377,6 +493,18 @@ header img {
   height: 200px;
   object-fit: cover;
 }
+.restaurant article figure button {
+  position: absolute;
+  display: block;
+  background-color: #99e2d0;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 2px;
+  z-index: 20;
+  right: 5%;
+  top: 5%;
+}
 .restaurant article div {
   display: flex;
   flex-direction: column;
@@ -386,7 +514,7 @@ header img {
 .restaurant article div h3 {
   font-weight: bold;
   font-size: 1.3rem;
-  initial-letter-align: 1.5px;
+  initial-letter-align: 1.55px;
 }
 .restaurant article div p {
   margin-top: 5px;
@@ -399,13 +527,21 @@ header img {
   bottom: 180%;
   font-size: 2rem;
 }
-
-/* -------- Page des menus -------*/
-.picture {
-  display: block;
-  max-height: 350px;
+.restaurant article div .fas {
+  color: transparent;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 0.4s;
+}
+.restaurant article div:hover .fas {
+  opacity: 1;
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
+/* -------- Page des menus -------*/
 .menu {
   display: flex;
   top: -300px;
@@ -417,12 +553,35 @@ header img {
   top: -70px;
   background-color: #f6f6f6;
 }
+.menu .categorie:nth-child(2) .label_box {
+  animation-name: fadeUp;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
+  animation-delay: 0.5s;
+}
+.menu .categorie:nth-child(3) .label_box {
+  animation-name: fadeUp;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
+  animation-delay: 0.5s;
+}
+.menu .categorie:nth-child(3) .label_box {
+  animation-delay: 1s;
+}
+.menu .categorie:nth-child(4) .label_box {
+  animation-name: fadeUp;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
+  animation-delay: 0.5s;
+}
+.menu .categorie:nth-child(4) .label_box {
+  animation-delay: 1.5s;
+}
 .menu .title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-size: xx-large;
-  align-items: center;
 }
 .menu .title h2 {
   font-weight: 900;
@@ -440,99 +599,93 @@ header img {
 .menu h3 + .bar_divider {
   margin-bottom: 10px;
 }
-.menu .categorie {
+.menu .favorite i {
+  position: absolute;
+}
+.menu .fas {
+  color: transparent;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 0.4s;
+}
+.menu .fas:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.menu article {
+  background: #fff;
+  margin: 1rem 0;
   display: flex;
-  flex-direction: column;
-  margin: 20px 0;
-  padding: 10px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 2px 4px 5px rgba(216, 211, 211, 0.5);
+  white-space: nowrap;
 }
-.menu .categorie .label_box {
-  animation-name: fadeUp;
-  animation-duration: 1000ms;
-  animation-fill-mode: backwards;
-  animation-delay: 0.5s;
+.menu article .label_description {
+  padding: 0.8rem;
+  overflow: hidden;
 }
-@keyframes fadeUp {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.menu article .label_description h4 {
+  font-weight: 600;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.menu .categorie:nth-child(3) .label_box {
-  animation-name: fadeUp;
-  animation-duration: 1000ms;
-  animation-fill-mode: backwards;
-  animation-delay: 0.5s;
+.menu article .label_description p {
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-@keyframes fadeUp {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.menu .categorie:nth-child(3) .label_box {
-  animation-delay: 1s;
-}
-.menu .categorie:nth-child(4) .label_box {
-  animation-name: fadeUp;
-  animation-duration: 1000ms;
-  animation-fill-mode: backwards;
-  animation-delay: 0.5s;
-}
-@keyframes fadeUp {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.menu .categorie:nth-child(4) .label_box {
-  animation-delay: 1.5s;
-}
-.menu .categorie article {
+.menu article .price {
+  margin-left: auto;
+  font-weight: bold;
   display: flex;
-  border-radius: 15px;
-  margin: 8px 0;
+  align-items: flex-end;
+  padding-right: 1rem;
+  padding-bottom: 0.5rem;
+}
+.menu article .check_area {
   background-color: #99e2d0;
-  align-items: center;
-  box-shadow: 2px 4px 8px rgb(216, 211, 211);
-  width: 100%;
+  border-radius: 0 0.75rem 0.75rem 0;
+  margin-right: -4rem;
+  width: 4rem;
+  display: grid;
+  place-items: center;
+  transition: margin-right 0.8s;
 }
-.menu .categorie article .anim_label {
-  background-color: white;
-  width: 100%;
-  padding: 20px;
-  border-radius: 15px;
+.menu article .check_area i {
+  background: #fff;
+  aspect-ratio: 1;
+  width: 1.5rem;
+  border-radius: 50%;
+  color: #99e2d0;
+  display: grid;
+  place-items: center;
 }
-.menu .categorie article .anim_label div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.menu article:hover .check_area {
+  margin-right: 0;
 }
-.menu .categorie article .anim_label div .price {
-  font-weight: 600;
+.menu article:hover i {
+  animation: spinCheck 0.5s;
 }
-.menu .categorie article .anim_label:hover {
-  width: 80%;
-  transition: 0.5s;
+.menu .order {
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  color: white;
+  font-size: 0.9rem;
+  padding: 13px;
+  margin: 10px 0;
+  cursor: pointer;
+  width: 60%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.menu .categorie article .anim_label span {
-  font-weight: 600;
-}
-.menu .btn_container {
-  display: flex;
-  justify-content: center;
+.menu .order:hover {
+  background: linear-gradient(170deg, rgba(255, 121, 218, 0.8) 0%, rgba(214, 108, 219, 0.8) 39%, rgba(171, 94, 220, 0.8) 85%, rgba(155, 89, 220, 0.8) 100%);
+  box-shadow: 4px 4px 2px rgb(172, 171, 171);
 }
 
 footer {
@@ -542,7 +695,7 @@ footer {
   padding: 20px;
   width: 100%;
 }
-footer h4 {
+footer h1 {
   font-family: "shrikhand", sans-serif;
   color: white;
   font-size: 1.4rem;
@@ -573,6 +726,9 @@ footer li:nth-child(2):before {
   content: "\f4c4";
   font-family: FontAwesome;
   margin-right: 2%;
+}
+footer li a {
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
