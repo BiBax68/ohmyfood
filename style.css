@@ -608,8 +608,6 @@ header button:hover {
   background-clip: text;
   -webkit-background-clip: text;
   position: absolute;
-  margin-left: -6.4%;
-  margin-top: 0.5%;
   opacity: 0;
   transition: all 0.4s;
 }
