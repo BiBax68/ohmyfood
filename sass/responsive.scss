@@ -148,7 +148,6 @@
     }
     .menu {
       display: grid;
-      grid-template-rows: 3;
       grid-template-columns: repeat(3, 1fr);
       .title {
         grid-column: 2/3;
