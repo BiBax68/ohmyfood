@@ -602,7 +602,6 @@ header button:hover {
 }
 .menu .favorite {
   position: relative;
-  border: #353535 1px solid;
 }
 .menu .favorite i {
   position: relative;
