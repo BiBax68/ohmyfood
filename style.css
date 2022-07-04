@@ -127,10 +127,10 @@ td, th {
 /* CHECK MARK*/
 @keyframes spinCheck {
   0% {
-    transform: rotate(-270deg);
+    transform: rotate(90deg);
   }
   100% {
-    transform: rotate(0);
+    transform: rotate(360deg);
   }
 }
 @media (min-width: 43rem) and (max-width: 62rem) {
@@ -675,7 +675,7 @@ header a:hover {
   margin-right: 0;
 }
 .menu article:hover i {
-  animation: spinCheck 0.5s;
+  animation: spinCheck 1.5s;
 }
 .menu .order {
   border-radius: 25px;
