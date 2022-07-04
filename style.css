@@ -161,8 +161,9 @@ td, th {
   body .restaurant {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
   }
-  body .restaurant .title_menu {
+  body .restaurant h2 {
     margin: 1% 3%;
     grid-column: 1/-1;
     white-space: nowrap;
