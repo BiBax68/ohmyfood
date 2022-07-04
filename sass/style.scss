@@ -244,7 +244,7 @@ header {
       object-fit: cover;
     }
 
-    figure button {
+    figure span {
       position: absolute;
       display: block;
       background-color: $third-color;
@@ -355,26 +355,28 @@ header {
     margin-bottom: 10px;
   }
 
-  article .favorite {
+  .favorite {
     position: relative;
+    border: #353535 1px solid;
     i {
-      position: absolute;
+      position: relative;
     }
-  }
+    .fas {
+      color: transparent;
+      background-image: linear-gradient($secondary-color, $primary-color);
+      background-clip: text;
+      -webkit-background-clip: text;
+      margin-left: -2rem;
+      opacity: 0;
+      position: absolute;
+      transition: all 0.4s;
 
-  .favorite .fas {
-    color: transparent;
-    background-image: linear-gradient($secondary-color, $primary-color);
-    background-clip: text;
-    -webkit-background-clip: text;
-    position: absolute;
-    opacity: 0;
-    transition: all 0.4s;
-
-    &:hover {
-      opacity: 1;
-      transform: scale(1.1);
-      cursor: pointer;
+      &:hover {
+        opacity: 1;
+        transform: scale(1.1);
+        transform: translateY(2px);
+        cursor: pointer;
+      }
     }
   }
 

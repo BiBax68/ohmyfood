@@ -68,8 +68,11 @@
         display: flex;
         justify-content: center;
         margin: 4% 0;
-        i {
+        .favorite {
           margin: 5px 20px;
+          .fas {
+            margin-left: -2rem;
+          }
         }
       }
       .order {
@@ -154,8 +157,11 @@
         display: flex;
         justify-content: center;
         margin: 4% 0;
-        i {
+        .favorite {
           margin: 5px 20px;
+          .fas {
+            margin-left: -2rem;
+          }
         }
       }
 
