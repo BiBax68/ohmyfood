@@ -318,7 +318,7 @@ header img {
   width: 40%;
   padding: 10px;
 }
-header button {
+header a {
   border: none;
   background-color: transparent;
   font-size: x-large;
@@ -327,7 +327,7 @@ header button {
   top: 50%;
   transform: translateY(-50%);
 }
-header button:hover {
+header a:hover {
   cursor: pointer;
 }
 
